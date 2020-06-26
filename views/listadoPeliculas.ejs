@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include('./partials/head.ejs')%>
+    <title>Document</title>
+</head>
+<body>
+    <%-include('./partials/header.ejs')%>
+
+    <h1>LISTADO DE PELICULAS</h1>
+    <ul>
+        <% for( let i = 0; i < peliculas.length; i++ ) { %>
+        <li>
+           <a href="/peliculas/detalle/<%=  peliculas[i].id  %> ">
+            <%= peliculas[i].title %>  
+        </a>
+        </li>
+        <% } %>
+    </ul>
+    <%-include('./partials/footer.ejs')%>
+
+    <%-include('./partials/scripts.ejs')%>
+</body>
+</html>

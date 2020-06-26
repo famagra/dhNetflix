@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%-include('./partials/head.ejs')%>
+    <title>Document</title>
+</head>
+
+<body>
+    <%-include('./partials/header.ejs')%>
+    <h1>
+        VAMOS A CREAR EDITAR UNA PELICULA
+    </h1>
+
+    <form action="/peliculas/editar/<%= peliculas.id %>" method="post">
+
+        <div>
+            <label for="">TITULO</label>
+            <input type="text" name="titulo" value="<%= peliculas.title %> ">
+        </div>
+        <div>
+            <label for="">PREMIOS</label>
+            <input type="text" name="premio" value="<%= peliculas.awards %> ">
+        </div>
+        <div>
+            <label for="">duracion</label>
+            <input type="text" name="duracion" value="<%= peliculas.length %> ">
+        </div>
+        <div>
+            <label for="">fecha de estreno</label>
+            <input type="date" name="fecha" value="<%= peliculas.release_date %> ">
+        </div>
+        
+
+        <div>
+            <button type="submit">editar!!!</button>
+        </div>
+
+
+    </form>
+<%-include('./partials/footer.ejs')%>
+
+<%-include('./partials/scripts.ejs')%>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%-include('./partials/head.ejs')%>
+    <title>Document</title>
+</head>
+
+<body>
+    <%-include('./partials/header.ejs')%>
+
+    <h1>Detalle de la pelicula seleccionada</h1>
+    <ul>
+        <li>
+            NOMBRE: <%= peliculas.title %> 
+
+        </li>
+        <li>
+             PREMIOS: <%= peliculas.awards %>
+        </li>
+        <li>
+            DURACION: <%= peliculas.length %>
+        </li>
+        
+    </ul>
+
+    <br>
+    <form action="/peliculas/editar/<%= peliculas.id %>" method="get">
+        <button type="submit">MODIFICIAR</button>
+     </form>
+     <form action="/peliculas/eliminar/<%= peliculas.id %>" method="post">
+        <button type="submit">ELIMINAR</button>
+     </form>
+        
+   
+    <%-include('./partials/footer.ejs')%>
+
+    <%-include('./partials/scripts.ejs')%>
+</body>
+
+</html>

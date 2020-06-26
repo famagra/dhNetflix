@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <%-include('./partials/head.ejs')%>
+</head>
+
+<body>
+    <%-include('./partials/header.ejs')%>
+    <h1>
+        listado de peliculas buscadas
+    </h1>
+
+    <ul>
+        <% for( let i = 0; i < peliculas.length; i++ ) { %>
+        <li>
+            <%= peliculas[i].title %>
+        </li>
+        <% } %>
+    </ul>
+
+    <%-include('./partials/footer.ejs')%>
+
+    <%-include('./partials/scripts.ejs')%>
+</body>
+
+</html>
